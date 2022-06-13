@@ -1,0 +1,115 @@
+﻿@charset "utf-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body {
+    height: 100%;
+}
+
+.page-wrap {
+    width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    margin: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-style: italic;
+    font-size: large;
+    text-align: right;
+}
+
+h3 {
+    text-align: center;
+}
+
+.lists-wrap {
+    float: left;
+    width: 240px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: solid;
+    max-height: 500px;
+    min-height: 500px;
+}
+
+.lists-wrap .list:first-child {
+    padding-bottom: 10px;
+    border-bottom: solid;
+    max-height: 200px;
+}
+
+.lists-wrap .list {
+    padding-top: 10px;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.list ul {
+    list-style-type: none;
+}
+
+.list li {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
+.list li:hover {
+    background-color: #f5f5dc;
+}
+
+.list li.active {
+    font-weight: 600;
+    background-color: #eae6ca;
+}
+
+.table-wrap {
+    width: 567px;
+    float: right;
+    padding: 10px;
+    overflow: auto;
+    max-height: 500px;
+    min-height: 500px;
+}
+
+.table-wrap .cur-group,
+.table-wrap .cur-subject,
+.table-wrap .cur-lecturer {
+    font-weight: 600;
+}
+
+table, table tr, table td {
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+table {
+    border-collapse: collapse;
+    min-width: 100%;
+    margin-top: 10px;
+}
+
+table tr, table td {
+    padding: 3px;
+    text-align: center;
+}
+
+thead .first {
+    background-color: #eae6ca;
+}
+thead, tbody .first {
+    background-color: #f5f5dc;
+}

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test Task (Register of visits)</title>
+    <link rel="stylesheet" href="common.css" />
+    <script src="people.js"></script>
+    <script src="subj.js"></script>
+    <script src="register.js"></script>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header>
+        <h1>Журнал посещаемости занятий студентами различных групп</h1>
+        <h2>Только просмотр</h2>
+      </header>
+      <section class="bodyer">
+        <div class="lists-wrap">
+          <div class="list">
+            <h3>Список групп</h3>
+            <ul id="group-list">
+              <li id="group-0">Группа 1</li>
+              <li id="group-1">Группа 2</li>
+              <li id="group-2">Группа 3</li>
+              <li id="group-3" class="active">Группа 4</span></li>
+              <li id="group-4">Группа 5</li>
+            </ul>
+          </div>
+          <div class="list">
+            <h3>Список предметов обучения</h3>
+            <ul id="subject-list">
+              <li id="subject-0">Предмет 1 (уч.ст. Лектор 1)</li>
+              <li id="subject-1">Предмет 2 (уч.ст. Лектор 2)</li>
+              <li id="subject-2" class="active">Предмет 3 (уч.ст. Лектор 1)</li>
+              <li id="subject-3">Предмет 4 (уч.ст. Лектор 3)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <h3>Информация о посещаемости</h3>
+          <p>Посещаемость занятий по предмету обучения "<span class="active subject">ПРЕДМЕТ 3</span>" студентами группы "<span class="active group">ГРУППА 4</span>"</p>
+          <p>Преподаватель: <span class="active lecturer">ЛЕКТОР 1</span></p>
+          <table>
+            <thead>
+              <tr>
+                <td class="first">ФИО/Дата</td>
+                <td>1/2</td>
+                <td>1/3</td>
+                <td>1/4</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="first">2/1</td>
+                <td>2/2</td>
+                <td>2/3</td>
+                <td>2/4</td>
+              </tr>
+              <tr>
+                <td class="first">3/1</td>
+                <td>3/2</td>
+                <td>3/3</td>
+                <td>3/4</td>
+              </tr>
+              <tr>
+                <td class="first">4/1</td>
+                <td>4/2</td>
+                <td>4/3</td>
+                <td>4/4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <footer>
+        <!---->
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            let reg = new Register();
+
+            reg.showGroupList();
+            reg.showSubjectList();
+
+            reg.pick('group', 0, true);
+            reg.pick('subject', 0);
+
+            reg.setListeners();
+          });
+        </script>
+      </footer>
+    </div>
+  </body>
+</html>
